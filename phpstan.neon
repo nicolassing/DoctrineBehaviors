@@ -18,6 +18,7 @@ includes:
     - vendor/symplify/phpstan-rules/config/string-to-constant-rules.neon
     - vendor/symplify/phpstan-rules/config/symfony-rules.neon
     - vendor/symplify/phpstan-rules/config/test-rules.neon
+    - vendor/symplify/phpstan-rules/config/packages/symfony/symfony-rules.neon
 
 parameters:
     paths:
@@ -97,4 +98,3 @@ parameters:
         - '#Use separate function calls with readable variable names#'
         - '#Constant string value need to only have small letters, _, \-, \. and numbers#'
         - '#Property Knp\\DoctrineBehaviors\\Tests\\AbstractBehaviorTestCase\:\:\$entityManager \(Doctrine\\ORM\\EntityManagerInterface\) does not accept object\|null#'
-        - '#Parameter \#1 \$input of function array_filter expects array, array<int, string\>\|false given#'
