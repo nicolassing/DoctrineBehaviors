@@ -21,7 +21,7 @@ final class TranslationTypeHelper
             ->getNativeReflection();
 
         if ($reflection->isInterface()) {
-            if ($reflection->getName() === TranslatableInterface::class) {
+            if ($reflection->getName() === TranslatableInterface::class || $reflection->implementsInterface(TranslatableInterface::class)) {
                 return TranslationInterface::class;
             }
 
@@ -44,7 +44,7 @@ final class TranslationTypeHelper
             ->getNativeReflection();
 
         if ($reflection->isInterface()) {
-            if ($reflection->getName() === TranslationInterface::class) {
+            if ($reflection->getName() === TranslationInterface::class || $reflection->implementsInterface(TranslationInterface::class)) {
                 return TranslatableInterface::class;
             }
 
